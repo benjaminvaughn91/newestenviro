@@ -27,11 +27,8 @@ namespace EnvironmentCrime
                 var services = scope.ServiceProvider;
                 try
                 {
-                    Debug.Print("tjohej0");
                     DBInitializer.EnsurePopulated(services);
-                    Debug.Print("tjohej1");
                     IdentityInitializer.EnsurePopulated(services).Wait();
-                    Debug.Print("tjohej2");
                     AccountManager.Initialize(services);
                 }
                 catch (Exception ex)

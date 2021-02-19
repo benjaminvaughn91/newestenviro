@@ -16,7 +16,7 @@ namespace EnvironmentCrime.Models
             var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
             
             await CreateRoles(roleManager);
-            //await CreateUsers(userManager);
+            //await CreateDummyUsers(userManager);
             //await CreateAdmin(services);
         }
 
@@ -40,7 +40,7 @@ namespace EnvironmentCrime.Models
             }
         }
 
-        private static async Task CreateUsers(UserManager<IdentityUser> uManager)
+        private static async Task CreateDummyUsers(UserManager<IdentityUser> uManager)
         {
             IdentityUser E001 = new IdentityUser("E001");
             IdentityUser E100 = new IdentityUser("E100");
